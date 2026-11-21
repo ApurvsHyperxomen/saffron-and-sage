@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saffron &amp; Sage — Artisanal Pure Veg Kitchen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo">
+        <span class="logo-dot"></span>
+        Saffron <em>&amp;</em> Sage
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#story">Our Story</a>
+        <a href="#reserve">Reserve</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+            <path d="M3 6h18" />
+            <path d="M16 10a4 4 0 0 1-8 0" />
+          </svg>
+          <span>Order</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <span class="eyebrow">100% Pure Vegetarian • Farm-to-Table</span>
+        <h1>Crafted with heritage spices, plated for today.</h1>
+        <p class="hero-subtitle">
+          Slow-simmered gravies, stone-ground masalas, and seasonal produce—bringing comforting regional flavors together in one warm kitchen.
+        </p>
+        <div class="hero-cta">
+          <a href="#menu" class="btn btn-primary">Explore Menu</a>
+          <a href="#reserve" class="btn btn-outline">Book a Table</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <strong>4.9★</strong>
+            <span>2,400+ Reviews</span>
+          </div>
+          <div>
+            <strong>30 min</strong>
+            <span>Fresh Delivery</span>
+          </div>
+          <div>
+            <strong>100%</strong>
+            <span>Organic Ghee &amp; Produce</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="hero-image-frame">
+          <img
+            src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1000&q=80"
+            alt="Artisanal vegetarian feast spread"
+            onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 700%22><rect fill=%22%23e8dfd3%22 width=%22600%22 height=%22700%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Georgia%22 font-size=%2228%22 fill=%22%235c4d3c%22>Saffron %26 Sage Feast</text></svg>'"
+          />
+        </div>
+        <div class="floating-card">
+          <span class="badge-live"></span>
+          <div>
+            <strong>Chef's Tonight Special</strong>
+            <p>Royal Heritage Thali • ₹449</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights Strip -->
+  <section class="highlights">
+    <div class="container highlights-grid">
+      <div class="highlight-item reveal">
+        <span class="highlight-icon">🌿</span>
+        <div>
+          <h3>Farm-Fresh Daily</h3>
+          <p>Locally sourced vegetables delivered every morning before 6 AM.</p>
+        </div>
+      </div>
+      <div class="highlight-item reveal">
+        <span class="highlight-icon">🔥</span>
+        <div>
+          <h3>Wood-Fired Clay Oven</h3>
+          <p>Smoky tandoor starters and crisp breads baked to order.</p>
+        </div>
+      </div>
+      <div class="highlight-item reveal">
+        <span class="highlight-icon">✨</span>
+        <div>
+          <h3>Zero Artificial Colors</h3>
+          <p>Rich hues drawn purely from Kashmiri saffron, turmeric, and herbs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Menu Section -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Curated Dishes</span>
+        <h2>Our Signature Menu</h2>
+        <p>Filter by course and build your order directly from the kitchen.</p>
+      </div>
+
+      <div class="menu-controls reveal">
+        <div class="menu-filters" id="menuFilters">
+          <button class="filter-btn active" data-category="all">All Dishes</button>
+          <button class="filter-btn" data-category="starters">Starters &amp; Chaat</button>
+          <button class="filter-btn" data-category="mains">Mains &amp; Thalis</button>
+          <button class="filter-btn" data-category="south">South Indian</button>
+          <button class="filter-btn" data-category="desserts">Sweets &amp; Drinks</button>
+        </div>
+
+        <div class="search-box">
+          <input
+            type="text"
+            id="menuSearch"
+            placeholder="Search dishes (e.g., paneer, thali, idli)..."
+            aria-label="Search menu"
+          />
+        </div>
+      </div>
+
+      <div class="menu-grid" id="menuGrid">
+        <!-- Populated dynamically by script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="story-section" id="story">
+    <div class="container story-grid">
+      <div class="story-image reveal">
+        <img
+          src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=900&q=80"
+          alt="Traditional thali served fresh"
+          onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 500%22><rect fill=%22%2324332a%22 width=%22600%22 height=%22500%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Georgia%22 font-size=%2224%22 fill=%22%23faf7f2%22>Our Kitchen Story</text></svg>'"
+        />
+      </div>
+
+      <div class="story-content reveal">
+        <span class="eyebrow">Our Philosophy</span>
+        <h2>Slow cooking in a fast-moving world.</h2>
+        <p>
+          Every recipe at Saffron &amp; Sage begins with whole spices toasted in small batches, Bilona-cultured A2 ghee, and heirloom grains. Whether you drop in for crisp evening street chaat or a celebratory family thali, every plate carries warmth and balance.
+        </p>
+        <ul class="story-list">
+          <li>Hand-pounded spice blends prepared fresh each week</li>
+          <li>Dedicated separate preparation counters for Jain &amp; vegan options</li>
+          <li>Cozy indoor dining and breezy garden seating</li>
+        </ul>
+        <a href="#reserve" class="btn btn-primary">Reserve Your Experience</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation Section -->
+  <section class="reserve-section" id="reserve">
+    <div class="container reserve-wrapper reveal">
+      <div class="reserve-info">
+        <span class="eyebrow">Dine With Us</span>
+        <h2>Book a Table</h2>
+        <p>Planning a family dinner or weekend lunch? Reserve your table in seconds and we’ll keep it ready.</p>
+        <div class="hours-card">
+          <h4>Opening Hours</h4>
+          <p><strong>Mon – Fri:</strong> 11:30 AM – 11:00 PM</p>
+          <p><strong>Sat – Sun:</strong> 9:00 AM – 11:30 PM</p>
+          <p><strong>Location:</strong> 24 Banyan Courtyard, Baner Road</p>
+        </div>
+      </div>
+
+      <form class="reserve-form" id="reservationForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="resName">Full Name</label>
+            <input type="text" id="resName" placeholder="e.g., Aarav Sharma" required />
+          </div>
+          <div class="form-group">
+            <label for="resPhone">Phone Number</label>
+            <input type="tel" id="resPhone" placeholder="+91 98765 43210" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="resDate">Date</label>
+            <input type="date" id="resDate" required />
+          </div>
+          <div class="form-group">
+            <label for="resTime">Time Slot</label>
+            <select id="resTime" required>
+              <option value="12:30 PM">12:30 PM (Lunch)</option>
+              <option value="02:00 PM">02:00 PM (Lunch)</option>
+              <option value="07:30 PM" selected>07:30 PM (Dinner)</option>
+              <option value="08:30 PM">08:30 PM (Dinner)</option>
+              <option value="09:30 PM">09:30 PM (Dinner)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="resGuests">Number of Guests</label>
+          <select id="resGuests" required>
+            <option value="2">2 Guests</option>
+            <option value="4" selected>4 Guests</option>
+            <option value="6">6 Guests</option>
+            <option value="8+">8+ Guests (Family Table)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">Confirm Reservation</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#home" class="logo footer-logo">
+          <span class="logo-dot"></span>
+          Saffron <em>&amp;</em> Sage
+        </a>
+        <p class="footer-text">Pure vegetarian artisanal dining crafted with fresh local produce and timeless recipes.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#story">Our Story</a>
+        <a href="#reserve">Reservations</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>hello@saffronandsage.in</p>
+        <p>+91 98200 11223</p>
+        <p>Baner Road, Pune</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Saffron &amp; Sage Kitchen. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Slide-out Cart Drawer -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart">
+    <div class="cart-header">
+      <h3>Your Order</h3>
+      <button class="close-btn" id="closeCartBtn" aria-label="Close cart">&times;</button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <!-- Populated dynamically by script.js -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">₹0</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>GST (5%)</span>
+        <span id="cartTax">₹0</span>
+      </div>
+      <div class="cart-summary-row total">
+        <span>Total</span>
+        <span id="cartTotal">₹0</span>
+      </div>
+      <button class="btn btn-primary btn-full" id="checkoutBtn">Place Order</button>
+    </div>
+  </aside>
+
+  <!-- Toast Notifications -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
